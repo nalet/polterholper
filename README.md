@@ -17,9 +17,15 @@ Clone the repo und start the app:
 
 ```bash
 git clone https://github.com/nalet/polterholper
-cd polterholper
+cd polterholper/ClientApp
+npm install
+cd ..cd ..
 #Before running set the enviroment variable correctly! 
 dotnet watch run
 ```
 
 Navigate to https://localhost:5001 ignore the certificate errors of the self signed certificate.
+
+Final result:
+
+<img src="polterholper.gif" alt="" />
