@@ -1,0 +1,25 @@
+<h3>Marco: {{ game.game5.pointsMarco }} Team: {{ game.game5.pointsTeam }}</h3>
+<button [disabled]="game.game5.current !== 0" (click)="startGame()" mat-raised-button color="primary">Spiel Beginnen</button>
+<br>
+<br>
+<h4>Countdown: {{countdown}} - Spieler: {{game.game5.currentPlayer}}</h4>
+<h4>Frage: {{game.game5.current}} - <span *ngIf="game.game5.current == 1">WM Teilnehmer 2018</span><span *ngIf="game.game5.current == 2">WM Finalisten</span><span *ngIf="game.game5.current == 3">EM Sieger</span><span *ngIf="game.game5.current == 4">WM Gastgeber vor 2018</span><span *ngIf="game.game5.current == 5">WM Gegner der Schweiz </span><span *ngIf="game.game5.current == 6">Torschützenkönige</span></h4>
+<div class="app-admin-game5-items" *ngIf="game.game5.current !== 0">
+  <button *ngFor="let item of game.game5.guessItems | forFilter:game.game5.current" (click)="showItem(item.id)" [disabled]="item.visible" mat-raised-button color="accent">{{ item.content }}</button>
+</div>
+<div class="app-admin-button-actions">
+  <button (click)="start()" mat-raised-button color="primary">Start</button>
+  <button (click)="mistakeMarco()" mat-raised-button color="warn">Fehler Marco</button>
+  <button (click)="mistakeTeam()" mat-raised-button color="warn">Fehler Team</button>
+  <button (click)="showAll()" mat-raised-button color="primary">Alle Anzeigen</button>
+  <button (click)="next()" mat-raised-button color="primary">Nächste Frage</button>
+</div>
+<br><br>
+<div class="app-admin-button-actions">
+  <button (click)="plusMarco()" mat-raised-button color="primary">+ Marco</button>
+  <button (click)="plusTeam()" mat-raised-button color="primary">+ Team</button>
+  <button (click)="minusMarco()" mat-raised-button color="warn">- Marco</button>
+  <button (click)="minusTeam()" mat-raised-button color="warn">- Team</button>
+</div>
+<br>
+<button [disabled]="game.game5.current === 0" (click)="endGame()" mat-raised-button color="warn">Spiel Beenden</button>

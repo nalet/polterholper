@@ -1,0 +1,55 @@
+.app-game1-frage {
+    mat-form-field {
+        left: calc(50% - 60px);
+        bottom: 0;
+        position: absolute;
+    }
+    img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 75%;
+        max-width: 75%;
+    }
+}
+
+.app-spiel1-solution {
+    .app-spiel1-solution-marco {
+        position: fixed;
+        margin: 10px;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+    }
+    .app-spiel1-solution-team {
+        position: fixed;
+        margin: 10px;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        float: right;
+        text-align: right;
+    }
+    .app-spiel1-solution-solution {
+        position: fixed;
+        margin: 10px;
+        bottom: 0;
+        left: calc(50% - 50px);
+        font-size: 100px;
+        line-height: -20px;
+        text-align: center;
+        width: 100px;
+        p {
+            margin: 0;
+        }
+    }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}

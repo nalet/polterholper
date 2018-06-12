@@ -1,0 +1,18 @@
+.app-start {
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    ul {
+        position: absolute;
+        top: 20px;
+        left: calc(50% - 44px);
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 44px);
+    }
+}

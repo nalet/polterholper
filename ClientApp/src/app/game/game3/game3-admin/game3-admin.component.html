@@ -1,0 +1,113 @@
+<h3>Marco: {{ game.game3.pointsMarco }} Team: {{ game.game3.pointsTeam }}</h3>
+<button [disabled]="game.game3.current !== 0" (click)="startGame()" mat-raised-button color="primary">Spiel Beginnen</button>
+<br>
+<br>
+<div class="mat-table mat-elevation-z8">
+  <div class="mat-header-row">
+    <div class="mat-header-cell">#</div>
+    <div class="mat-header-cell">Lied</div>
+    <div class="mat-header-cell">Play</div>
+    <div class="mat-header-cell">Play Lösung</div>
+    <div class="mat-header-cell">Stop</div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">1</div>
+    <div class="mat-cell">079</div>
+    <div class="mat-cell"><button (click)="play('1.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('1s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">2</div>
+    <div class="mat-cell">We Are The Champions</div>
+    <div class="mat-cell"><button (click)="play('2.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('2s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">3</div>
+    <div class="mat-cell">Venus vo Bümplitz</div>
+    <div class="mat-cell"><button (click)="play('3.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('3s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">4</div>
+    <div class="mat-cell">Shape Of You</div>
+    <div class="mat-cell"><button (click)="play('4.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('4s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">5</div>
+    <div class="mat-cell">Rosalie</div>
+    <div class="mat-cell"><button (click)="play('5.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('5s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">6</div>
+    <div class="mat-cell">Hello</div>
+    <div class="mat-cell"><button (click)="play('6.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('6s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">7</div>
+    <div class="mat-cell">Chihuahua</div>
+    <div class="mat-cell"><button (click)="play('7.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('7s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">8</div>
+    <div class="mat-cell">Mr. Saxobeat</div>
+    <div class="mat-cell"><button (click)="play('8.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('8s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">9</div>
+    <div class="mat-cell">Sunne U Mond Blues</div>
+    <div class="mat-cell"><button (click)="play('9.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('9s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">10</div>
+    <div class="mat-cell">Billie Jean</div>
+    <div class="mat-cell"><button (click)="play('10.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('10s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">11</div>
+    <div class="mat-cell">Oops I Did It Again</div>
+    <div class="mat-cell"><button (click)="play('11.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('11s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">12</div>
+    <div class="mat-cell">Ig schänke dir mis Härz</div>
+    <div class="mat-cell"><button (click)="play('12.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('12s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">13</div>
+    <div class="mat-cell">Danza Kuduro</div>
+    <div class="mat-cell"><button (click)="play('13.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="play('13s.mp3')" mat-raised-button color="primary">Play</button></div>
+    <div class="mat-cell"><button (click)="stop()" mat-raised-button color="warn">Stop</button></div>
+  </div>
+</div>
+<h4>STOP von: {{lastStop}}</h4>
+<div class="app-admin-button-actions">
+  <button (click)="plusMarco()" mat-raised-button color="primary">+ Marco</button>
+  <button (click)="plusTeam()" mat-raised-button color="primary">+ Team</button>
+  <button (click)="minusMarco()" mat-raised-button color="warn">- Marco</button>
+  <button (click)="minusTeam()" mat-raised-button color="warn">- Team</button>
+</div>
+<br>
+<button [disabled]="game.game3.current === 0" (click)="endGame()" mat-raised-button color="warn">Spiel Beenden</button>

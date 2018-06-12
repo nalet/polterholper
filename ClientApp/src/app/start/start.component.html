@@ -1,0 +1,17 @@
+<div class="app-start">
+  <ul>
+    <li>
+      <a mat-raised-button color="primary" [routerLink]="['admin/admin']">admin</a>
+    </li>
+    <li>
+      <a mat-raised-button color="primary" [routerLink]="['marco/game/blank']">marco</a>
+    </li>
+    <li>
+      <a mat-raised-button color="primary" [routerLink]="['team/game/blank']">team</a>
+    </li>
+    <li>
+      <a mat-raised-button color="primary" [routerLink]="['beamer/game/blank']">beamer</a>
+    </li>
+  </ul>
+  <button mat-raised-button color="warn" (click)="reset()">reset</button>
+</div>

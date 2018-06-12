@@ -1,0 +1,20 @@
+<div class="app-content" *ngIf="game">
+  <app-game-intro game="Spiel 5" title="Inä mit de Böllä" *ngIf="game.game5.current === 0"></app-game-intro>
+  <div class="app-score" *ngIf="game.game5.current !== 0">
+    <div class="score-marco">Marco
+      <p>{{game.game5.pointsMarco}}</p>
+    </div>
+    <div class="score-team">Team
+      <p>{{game.game5.pointsTeam}}</p>
+    </div>
+  </div>
+  <div>
+    <div class="app-game5-content" *ngIf="game.game5.current !== 0">
+      <button *ngFor="let item of game.game5.guessItems | forFilter:game.game5.current" (click)="showItem(item.id)" mat-raised-button color="accent" [ngClass]="{'app-game5-visible': !item.visible}">{{ item.content }}</button>
+    </div>
+  </div>
+  <div class="app-number-center-large" *ngIf="game.game5.current !== 0">
+    {{countdown}}<br>
+    {{game.game5.currentPlayer}}
+  </div>
+</div>

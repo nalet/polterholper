@@ -1,0 +1,15 @@
+<h3>Marco: {{ game.game2.pointsMarco }} Team: {{ game.game2.pointsTeam }}</h3>
+<button [disabled]="game.game2.current !== 0" (click)="startGame()" mat-raised-button color="primary">Spiel Beginnen</button>
+<br><br>
+<h4>Count: {{this.game.game2.count}}</h4>
+<div class="app-admin-button-actions">
+  <button (click)="plusMarco()" mat-raised-button color="primary">+ Marco</button>
+  <button (click)="plusTeam()" mat-raised-button color="primary">+ Team</button>
+  <button (click)="minusMarco()" mat-raised-button color="warn">- Marco</button>
+  <button (click)="minusTeam()" mat-raised-button color="warn">- Team</button>
+  <button (click)="plusCount()" mat-raised-button color="primary">+ Count</button>
+  <button (click)="minusCount()" mat-raised-button color="warn">- Count</button>
+  <button (click)="countZero()" mat-raised-button color="warn">Count = 0</button>
+</div>
+<br>
+<button [disabled]="game.game2.current === 0" (click)="endGame()" mat-raised-button color="warn">Spiel Beenden</button>

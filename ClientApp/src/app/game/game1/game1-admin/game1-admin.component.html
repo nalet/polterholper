@@ -1,0 +1,144 @@
+<h3>Marco: {{ game.game1.pointsMarco }} Team: {{ game.game1.pointsTeam }}</h3>
+<button [disabled]="game.game1.current !== 0" (click)="startGame()" mat-raised-button color="primary">Spiel Beginnen</button>
+<span flex></span>
+<button [disabled]="!game.game1.showResult" (click)="next()" mat-raised-button color="primary">Weiter</button>
+<br><br>
+<div class="mat-table mat-elevation-z8">
+  <div class="mat-header-row">
+    <div class="mat-header-cell">#</div>
+    <div class="mat-header-cell">Frage</div>
+    <div class="mat-header-cell">Lösung</div>
+    <div class="mat-header-cell">Marco</div>
+    <div class="mat-header-cell">Team</div>
+    <div class="mat-header-cell">Sieger</div>
+    <div class="mat-header-cell">Aktion</div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">1</div>
+    <div class="mat-cell">Quöllfrisch Naturtrüb</div>
+    <div class="mat-cell">{{ game.game1.q1s }}</div>
+    <div class="mat-cell">{{ game.game1.q1m }}</div>
+    <div class="mat-cell">{{ game.game1.q1t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q1s,game.game1.q1m,game.game1.q1t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 1 || game.game1.showResult" (click)="auswerten(1,game.game1.q1s,game.game1.q1m,game.game1.q1t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">2</div>
+    <div class="mat-cell">Bilz Panache</div>
+    <div class="mat-cell">{{ game.game1.q2s }}</div>
+    <div class="mat-cell">{{ game.game1.q2m }}</div>
+    <div class="mat-cell">{{ game.game1.q2t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q2s,game.game1.q2m,game.game1.q2t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 2 || game.game1.showResult" (click)="auswerten(2,game.game1.q2s,game.game1.q2m,game.game1.q2t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">3</div>
+    <div class="mat-cell">Singha Bier</div>
+    <div class="mat-cell">{{ game.game1.q3s }}</div>
+    <div class="mat-cell">{{ game.game1.q3m }}</div>
+    <div class="mat-cell">{{ game.game1.q3t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q3s,game.game1.q3m,game.game1.q3t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 3 || game.game1.showResult" (click)="auswerten(3,game.game1.q3s,game.game1.q3m,game.game1.q3t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">4</div>
+    <div class="mat-cell">Sommersby</div>
+    <div class="mat-cell">{{ game.game1.q4s }}</div>
+    <div class="mat-cell">{{ game.game1.q4m }}</div>
+    <div class="mat-cell">{{ game.game1.q4t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q4s,game.game1.q4m,game.game1.q4t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 4 || game.game1.showResult" (click)="auswerten(4,game.game1.q4s,game.game1.q4m,game.game1.q4t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">5</div>
+    <div class="mat-cell">Prix Garantie</div>
+    <div class="mat-cell">{{ game.game1.q5s }}</div>
+    <div class="mat-cell">{{ game.game1.q5m }}</div>
+    <div class="mat-cell">{{ game.game1.q5t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q5s,game.game1.q5m,game.game1.q5t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 5 || game.game1.showResult" (click)="auswerten(5,game.game1.q5s,game.game1.q5m,game.game1.q5t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">6</div>
+    <div class="mat-cell">Guinness Draught</div>
+    <div class="mat-cell">{{ game.game1.q6s }}</div>
+    <div class="mat-cell">{{ game.game1.q6m }}</div>
+    <div class="mat-cell">{{ game.game1.q6t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q6s,game.game1.q6m,game.game1.q6t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 6 || game.game1.showResult" (click)="auswerten(6,game.game1.q6s,game.game1.q6m,game.game1.q6t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">7</div>
+    <div class="mat-cell">Amsterdam Maximator</div>
+    <div class="mat-cell">{{ game.game1.q7s }}</div>
+    <div class="mat-cell">{{ game.game1.q7m }}</div>
+    <div class="mat-cell">{{ game.game1.q7t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q7s,game.game1.q7m,game.game1.q7t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 7 || game.game1.showResult" (click)="auswerten(7,game.game1.q7s,game.game1.q7m,game.game1.q7t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">8</div>
+    <div class="mat-cell">Punk IPA</div>
+    <div class="mat-cell">{{ game.game1.q8s }}</div>
+    <div class="mat-cell">{{ game.game1.q8m }}</div>
+    <div class="mat-cell">{{ game.game1.q8t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q8s,game.game1.q8m,game.game1.q8t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 8 || game.game1.showResult" (click)="auswerten(8,game.game1.q8s,game.game1.q8m,game.game1.q8t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">9</div>
+    <div class="mat-cell">Schneider Weisse</div>
+    <div class="mat-cell">{{ game.game1.q9s }}</div>
+    <div class="mat-cell">{{ game.game1.q9m }}</div>
+    <div class="mat-cell">{{ game.game1.q9t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q9s,game.game1.q9m,game.game1.q9t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 9 || game.game1.showResult" (click)="auswerten(9,game.game1.q9s,game.game1.q9m,game.game1.q9t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">10</div>
+    <div class="mat-cell">Eve Litchi</div>
+    <div class="mat-cell">{{ game.game1.q10s }}</div>
+    <div class="mat-cell">{{ game.game1.q10m }}</div>
+    <div class="mat-cell">{{ game.game1.q10t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q10s,game.game1.q10m,game.game1.q10t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 10 || game.game1.showResult" (click)="auswerten(10,game.game1.q10s,game.game1.q10m,game.game1.q10t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">11</div>
+    <div class="mat-cell">Snake Venom</div>
+    <div class="mat-cell">{{ game.game1.q11s }}</div>
+    <div class="mat-cell">{{ game.game1.q11m }}</div>
+    <div class="mat-cell">{{ game.game1.q11t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q11s,game.game1.q11m,game.game1.q11t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 11 || game.game1.showResult" (click)="auswerten(11,game.game1.q11s,game.game1.q11m,game.game1.q11t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">12</div>
+    <div class="mat-cell">Leffe Bruin</div>
+    <div class="mat-cell">{{ game.game1.q12s }}</div>
+    <div class="mat-cell">{{ game.game1.q12m }}</div>
+    <div class="mat-cell">{{ game.game1.q12t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q12s,game.game1.q12m,game.game1.q12t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 12 || game.game1.showResult" (click)="auswerten(12,game.game1.q12s,game.game1.q12m,game.game1.q12t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">13</div>
+    <div class="mat-cell">Desperados</div>
+    <div class="mat-cell">{{ game.game1.q13s }}</div>
+    <div class="mat-cell">{{ game.game1.q13m }}</div>
+    <div class="mat-cell">{{ game.game1.q13t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q13s,game.game1.q13m,game.game1.q13t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 13 || game.game1.showResult" (click)="auswerten(13,game.game1.q13s,game.game1.q13m,game.game1.q13t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+  <div class="mat-row">
+    <div class="mat-cell">14</div>
+    <div class="mat-cell">Belzebuth Extra Forte</div>
+    <div class="mat-cell">{{ game.game1.q14s }}</div>
+    <div class="mat-cell">{{ game.game1.q14m }}</div>
+    <div class="mat-cell">{{ game.game1.q14t }}</div>
+    <div class="mat-cell">{{ sieger(game.game1.q14s,game.game1.q14m,game.game1.q14t) }}</div>
+    <div class="mat-cell"><button [disabled]="game.game1.current !== 14 || game.game1.showResult" (click)="auswerten(14,game.game1.q14s,game.game1.q14m,game.game1.q14t)" mat-raised-button color="primary">Auswerten</button></div>
+  </div>
+</div>
+<br>
+<button [disabled]="game.game1.current === 0" (click)="endGame()" mat-raised-button color="warn">Spiel Beenden</button>

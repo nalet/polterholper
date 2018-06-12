@@ -1,0 +1,14 @@
+<div class="app-content" *ngIf="game">
+  <app-game-intro game="Spiel 2" title="Nageln" *ngIf="game.game2.current === 0"></app-game-intro>
+  <div class="app-score" *ngIf="game.game2.current !== 0">
+    <div class="score-marco">Marco
+      <p>{{game.game2.pointsMarco}}</p>
+    </div>
+    <div class="score-team">Team
+      <p>{{game.game2.pointsTeam}}</p>
+    </div>
+  </div>
+  <div class="app-number-center-large" *ngIf="game.game2.current !== 0">
+    {{game.game2.count}}
+  </div>
+</div>

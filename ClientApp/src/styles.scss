@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+@include mat-core();
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn: mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+$main-font: "Roboto",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica,
+Arial,
+"Lucida Grande",
+sans-serif;
+$backgroud-color: #fafafa;
+html {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    font-family: $main-font;
+    background-color: $backgroud-color;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.app-content {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.app-blank {
+    background-color: black;
+}
+
+.app-admin {
+    margin: 20px;
+}
+
+.app-overview-content {
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mat-table {
+    display: block;
+}
+
+.mat-row,
+.mat-header-row {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 24px;
+}
+
+.mat-cell,
+.mat-header-cell {
+    flex: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.app-score {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    p {
+        margin: 0;
+        font-size: 80px;
+    }
+    .score-marco {
+        position: fixed;
+        margin: 10px;
+        top: 0;
+        left: 0;
+        width: 400px;
+    }
+    .score-team {
+        position: fixed;
+        margin: 10px;
+        top: 0;
+        right: 0;
+        width: 400px;
+        float: right;
+        text-align: right;
+    }
+}
+
+.app-admin-top {
+    position: fixed;
+    margin: 10px;
+    top: 0;
+    right: 0;
+    button {
+        margin-left: 10px;
+    }
+}
+
+.app-admin-button-actions {
+    button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.app-number-center-large {
+    position: fixed;
+    text-align: center;
+    top: calc(50% - 100px);
+    right: 0;
+    height: 200px;
+    width: 100%;
+    content: center;
+    margin: 0;
+    padding: 0;
+    font-size: 180px;
+}

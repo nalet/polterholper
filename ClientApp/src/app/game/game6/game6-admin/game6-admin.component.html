@@ -1,0 +1,16 @@
+<h3>Marco: {{ game.game6.pointsMarco }} Team: {{ game.game6.pointsTeam }}</h3>
+<button [disabled]="game.game6.current !== 0" (click)="startGame()" mat-raised-button color="primary">Spiel Beginnen</button>
+<br><br>
+<h4>Zeit: {{time | date:'mm:ss'}}</h4>
+<div class="app-admin-button-actions">
+  <button (click)="start()" mat-raised-button color="primary">Start</button>
+  <button (click)="stop()" mat-raised-button color="primary">Stop</button>
+</div>
+<div class="app-admin-button-actions">
+  <button (click)="plusMarco()" mat-raised-button color="primary">+ Marco</button>
+  <button (click)="plusTeam()" mat-raised-button color="primary">+ Team</button>
+  <button (click)="minusMarco()" mat-raised-button color="warn">- Marco</button>
+  <button (click)="minusTeam()" mat-raised-button color="warn">- Team</button>
+</div>
+<br>
+<button [disabled]="game.game6.current === 0" (click)="endGame()" mat-raised-button color="warn">Spiel Beenden</button>

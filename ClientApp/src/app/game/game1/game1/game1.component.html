@@ -1,0 +1,203 @@
+<div class="app-content" *ngIf="game">
+  <app-game-intro game="Spiel 1" title="Leberrasseln" *ngIf="game.game1.current === 0"></app-game-intro>
+  <div class="app-score" *ngIf="game.game1.current !== 0">
+    <div class="score-marco">Marco <p>{{game.game1.pointsMarco}}</p></div>
+    <div class="score-team">Team <p>{{game.game1.pointsTeam}}</p></div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 1">
+    <div>
+      <img src="/assets/bier/1.png" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(1,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q1m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q1s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q1t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 2">
+    <div>
+      <img src="/assets/bier/2.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(2,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q2m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q2s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q2t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 3">
+    <div>
+      <img src="/assets/bier/3.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(3,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q3m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q3s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q3t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 4">
+    <div>
+      <img src="/assets/bier/4.png" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(4,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q4m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q4s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q4t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 5">
+    <div>
+      <img src="/assets/bier/5.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(5,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q5m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q5s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q5t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 6">
+    <div>
+      <img src="/assets/bier/6.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(6,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q6m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q6s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q6t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 7">
+    <div>
+      <img src="/assets/bier/7.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(7,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q7m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q7s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q7t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 8">
+    <div>
+      <img src="/assets/bier/8.png" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(8,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q8m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q8s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q8t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 9">
+    <div>
+      <img src="/assets/bier/9.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(9,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q9m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q9s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q9t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 10">
+    <div>
+      <img src="/assets/bier/10.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(10,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco">Marco <p>{{game.game1.q10m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q10s}}</p></div>
+        <div class="app-spiel1-solution-team">Team <p>{{game.game1.q10t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 11">
+    <div>
+      <img src="/assets/bier/11.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(11,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco">Marco <p>{{game.game1.q11m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q11s}}</p></div>
+        <div class="app-spiel1-solution-team">Team <p>{{game.game1.q11t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 12">
+    <div>
+      <img src="/assets/bier/12.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(12,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco">Marco <p>{{game.game12.q1m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q12s}}</p></div>
+        <div class="app-spiel1-solution-team">Team <p>{{game.game12.q1t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 13">
+    <div>
+      <img src="/assets/bier/13.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(13,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco">Marco <p>{{game.game13.q1m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q13s}}</p></div>
+        <div class="app-spiel1-solution-team">Team <p>{{game.game13.q1t}}</p></div>
+    </div>
+  </div>
+  <div class="app-game1-frage" *ngIf="game.game1.current === 14">
+    <div>
+      <img src="/assets/bier/14.jpg" alt="" />
+    </div>
+    <br>
+    <mat-form-field *ngIf="sessionService.sessionType !== _SessionType.BEAMER && !game.game1.showResult">
+      <input (input)="onChange(14,$event.target.value)" matInput placeholder="Gehalt" value="0">
+    </mat-form-field>
+    <div class="app-spiel1-solution" *ngIf="game.game1.showResult">
+        <div class="app-spiel1-solution-marco"><p>{{game.game1.q14m}}</p></div>
+        <div class="app-spiel1-solution-solution"><p>{{game.game1.q14s}}</p></div>
+        <div class="app-spiel1-solution-team"><p>{{game.game1.q14t}}</p></div>
+    </div>
+  </div>
+</div>

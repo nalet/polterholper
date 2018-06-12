@@ -1,0 +1,89 @@
+<div class="app-admin" *ngIf="game">
+  <h1>Admin - Step: {{ _Step[game.step] }}</h1>
+  <div class="app-admin-top">
+    <button mat-mini-fab color="primary" (click)="refresh()">
+      <mat-icon aria-label="refresh">refresh</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" (click)="plusM()">
+      <mat-icon aria-label="refresh">add</mat-icon>
+    </button>
+    <button mat-mini-fab color="warn" (click)="minusM()">
+      <mat-icon aria-label="refresh">remove</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" (click)="plusT()">
+      <mat-icon aria-label="refresh">add</mat-icon>
+    </button>
+    <button mat-mini-fab color="warn" (click)="minusT()">
+      <mat-icon aria-label="refresh">remove</mat-icon>
+    </button>
+  </div>
+  <div class="app-overview-content" *ngIf="!game.navStatus.intro">
+    <div>
+      <button (click)="startShow()" mat-raised-button color="primary">Start Show</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game1">
+    <div>
+      <button (click)="startGame1()" mat-raised-button color="primary">Start Game 1</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME1">
+    <app-game1-admin></app-game1-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game2">
+    <div>
+      <button (click)="startGame2()" mat-raised-button color="primary">Start Game 2</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME2">
+    <app-game2-admin></app-game2-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game3">
+    <div>
+      <button (click)="startGame3()" mat-raised-button color="primary">Start Game 3</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME3">
+    <app-game3-admin></app-game3-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game4">
+    <div>
+      <button (click)="startGame4()" mat-raised-button color="primary">Start Game 4</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME4">
+    <app-game4-admin></app-game4-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game5">
+    <div>
+      <button (click)="startGame5()" mat-raised-button color="primary">Start Game 5</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME5">
+    <app-game5-admin></app-game5-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game6">
+    <div>
+      <button (click)="startGame6()" mat-raised-button color="primary">Start Game 6</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME6">
+    <app-game6-admin></app-game6-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game7">
+    <div>
+      <button (click)="startGame7()" mat-raised-button color="primary">Start Game 7</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME7">
+    <app-game7-admin></app-game7-admin>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.INTRO || game.step === _Step.SCORE && !game.navStatus.game8">
+    <div>
+      <button (click)="startGame8()" mat-raised-button color="primary">Start Game 8</button>
+    </div>
+  </div>
+  <div class="app-overview-content" *ngIf="game.step === _Step.GAME8">
+    <app-game8-admin></app-game8-admin>
+  </div>
+</div>

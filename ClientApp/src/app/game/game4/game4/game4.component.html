@@ -1,0 +1,14 @@
+<div class="app-content" *ngIf="game">
+  <app-game-intro game="Spiel 4" title="Double Time" *ngIf="game.game4.current === 0"></app-game-intro>
+  <div class="app-score" *ngIf="game.game4.current !== 0">
+    <div class="score-marco">Marco
+      <p>{{game.game4.pointsMarco}}</p>
+    </div>
+    <div class="score-team">Team
+      <p>{{game.game4.pointsTeam}}</p>
+    </div>
+  </div>
+  <div class="app-number-center-large" *ngIf="game.game4.current !== 0">
+    {{game.game4.count}}
+  </div>
+</div>

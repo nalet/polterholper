@@ -1,0 +1,14 @@
+<div class="app-content" *ngIf="game">
+  <app-game-intro game="Spiel 3" title="Retour" *ngIf="game.game3.current === 0"></app-game-intro>
+  <div class="app-score" *ngIf="game.game3.current !== 0">
+    <div class="score-marco">Marco
+      <p>{{game.game3.pointsMarco}}</p>
+    </div>
+    <div class="score-team">Team
+      <p>{{game.game3.pointsTeam}}</p>
+    </div>
+  </div>
+  <div class="app-number-center-large" *ngIf="!enableStop">
+    {{lastStop}}
+  </div>
+</div>

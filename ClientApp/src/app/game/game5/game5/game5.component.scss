@@ -1,0 +1,25 @@
+.app-number-center-large {
+    font-size: 50px;
+    top: unset;
+    bottom: 0;
+    height: unset;
+}
+
+.app-game5-content {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    zoom: 120%;
+    text-align: center;
+    button {
+        margin: 10px;
+    }
+    .app-game5-visible {
+        opacity: 0;
+    }
+}
