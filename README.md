@@ -19,7 +19,7 @@ Clone the repo und start the app:
 git clone https://github.com/nalet/polterholper
 cd polterholper/ClientApp
 npm install
-cd ..cd ..
+cd ..
 #Before running set the enviroment variable correctly! 
 dotnet watch run
 ```
