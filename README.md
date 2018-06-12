@@ -6,6 +6,7 @@ Clone the repo und start the app:
 
 ```
 git clone https://github.com/nalet/polterholper
+cd polterholper
 dotnet watch run
 ```
 
